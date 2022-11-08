@@ -2,7 +2,7 @@ import React from "react";
 
 const Total = ({ total }) => {
   return (
-    <div>
+    <div className="meal-type">
       <p>Total</p>
       <p>{total}</p>
     </div>

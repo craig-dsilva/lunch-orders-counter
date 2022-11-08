@@ -5,8 +5,8 @@ const MealType = ({ name, count, handleIncrement }) => {
     handleIncrement(count + 1);
   };
   return (
-    <div>
-      <button onClick={add}>{name}</button>
+    <div className="meal-type">
+      <button onClick={add} className="meal-button">{name}</button>
       <p>{count}</p>
     </div>
   );

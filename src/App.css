@@ -1,0 +1,28 @@
+.meal-type {
+  display: flex;
+  justify-content: space-between;
+  margin: 5%;
+}
+
+button {
+  width: 25%;
+  border: none;
+}
+
+.meal-button {
+  background-color: rgb(69, 69, 249);
+  color: #fff;
+}
+
+.meal-button:hover {
+  background-color: #00f;
+}
+
+.reset {
+  background-color: rgb(255, 188, 62);
+  height: 3vh;
+}
+
+.reset:hover {
+  background-color: #ff0;
+}

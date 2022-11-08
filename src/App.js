@@ -50,7 +50,7 @@ const App = () => {
           handleIncrement={setAnything}
         />
         <Total total={total} />
-        <button onClick={clearTotal}>Reset</button>
+        <button onClick={clearTotal} className="reset">Reset</button>
       </div>
     </div>
   );
