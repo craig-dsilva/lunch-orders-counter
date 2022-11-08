@@ -12,13 +12,21 @@ const App = () => {
   const [anything, setAnything] = useState(0);
   const [total, setTotal] = useState(0);
 
-  const addTotal = () => {
-    setTotal(vegetarian + vegan + halal + glutenFree + anything);
-  };
-
   useEffect(() => {
+    const addTotal = () => {
+      setTotal(vegetarian + vegan + halal + glutenFree + anything);
+    };
     addTotal();
   }, [vegetarian, vegan, halal, glutenFree, anything]);
+
+  const clearTotal = () => {
+    setVegetarian(0);
+    setVegan(0);
+    setHalal(0);
+    setGlutenFree(0);
+    setAnything(0);
+    setTotal(0);
+  };
 
   return (
     <div className="App">
@@ -30,7 +38,7 @@ const App = () => {
           handleIncrement={setVegetarian}
         />
         <MealType name="Vegan" count={vegan} handleIncrement={setVegan} />
-        <MealType name="halal" count={halal} handleIncrement={setHalal} />
+        <MealType name="Halal" count={halal} handleIncrement={setHalal} />
         <MealType
           name="Gluten-free"
           count={glutenFree}
@@ -42,6 +50,7 @@ const App = () => {
           handleIncrement={setAnything}
         />
         <Total total={total} />
+        <button onClick={clearTotal}>Reset</button>
       </div>
     </div>
   );
